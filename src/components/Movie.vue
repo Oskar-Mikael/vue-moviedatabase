@@ -76,7 +76,7 @@ export default {
     getMovie() {
       this.movieId = this.movie.imdbID
       axios
-        .get("http://www.omdbapi.com/?i=" + this.movieId + "&apikey=" + this.apiKey)
+        .get("https://www.omdbapi.com/?i=" + this.movieId + "&apikey=" + this.apiKey)
         .then((response) => {
           this.movieInfo = response.data;
           console.log(response.data);

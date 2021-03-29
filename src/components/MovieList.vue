@@ -39,7 +39,7 @@ export default {
     getMovies(searchText) {
       this.movieSearchText = searchText;
       axios
-        .get("http://www.omdbapi.com/?s=" + searchText + "&apikey=" + this.apiKey)
+        .get("https://www.omdbapi.com/?s=" + searchText + "&apikey=" + this.apiKey)
         .then((response) => {
           if (response.data.Response === "False") {
             this.errorMessage = "No movies were found";
